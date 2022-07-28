@@ -1,0 +1,63 @@
+
+<link rel="stylesheet" href="/css/login.css">
+<link rel="stylesheet" href="/css/contact.css">
+
+<h3 style="color: white; margin-top: 30px;">Create a Job</h3>
+
+<div id="form">
+    <form method="post" action="/postjobs">
+        <div class="form-group">
+            <label style="color: white;" for="title">Title</label>
+            <input id="title" name="title" type="text" placeholder="Enter title" required/>
+        </div>
+
+        <div class="form-group">
+             <label style="color: white;" for="company">Company</label>
+            <input id="company" name="company" type="text" required/>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color: white;" for="location">Location</label>
+            <input id="location" name="location" type="text" required/>
+        </div>
+
+        <div class="form-group">
+            <label style="color: white;" for="experience">Experience</label>
+            <input id="experience" name="experience" type="text" required/>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color: white;" for="salary">Salary</label>
+            <input id="salary" name="salary" type="text" required/>
+        </div>
+
+        <div class="form-group">
+            <label style="color: white;" for="role">Role(Fulltime/Intern)</label>
+            <input id="role" name="role" type="text" required/>
+        </div>
+
+        <div class="form-group">
+            <label style="color: white;" for="education">Education</label>
+            <input id="education" name="education" type="text" required/>
+        </div>
+
+        <div class="form-group">
+            <label style="color: white;" for="skill">Skills</label>
+            <input id="skill" name="skills" type="text" required/>
+        </div>
+
+        <div class="form-group">
+            <label style="color: white;" for="description">Job description</label>
+            <input id="description" name="description" type="textarea" required/>
+        </div>
+        <div class="form-group">
+            <label style="color: white;" for="applylink">Apply Link</label>
+            <input id="applylink" name="applylink" type="text" required/>
+        </div>
+      
+      
+        <button type="submit" id="createjob" style="margin-bottom: 100px;">Post Job</button>
+    </form>
+</div>

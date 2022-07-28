@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/login.css">
+<link rel="stylesheet" href="/css/contact.css">
+
+<h3 style="color: white; margin-bottom: -70px;">Add User to Database</h3>
+
+<div id="form">
+    <form method="post" action="/adduser">
+        <div class="form-group">
+            <label style="color: white;" for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Enter name" required/>
+        </div>
+
+        <div class="form-group">
+             <label style="color: white;" for="roll">RollNo</label>
+            <input id="roll" name="rollNo" type="text" required/>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color: white;" for="email">Email</label>
+            <input id="email" name="email" type="email" required/>
+        </div>
+
+        <div class="form-group">
+            <label style="color: white;" for="branch">Branch</label>
+            <input id="branch" name="branch" type="text" required/>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color: white;" for="name">Phone</label>
+            <input id="phone" name="phone" type="number" required/>
+        </div>
+      
+        <button type="submit" id="adduser">Add User</button>
+    </form>
+</div>

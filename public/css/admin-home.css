@@ -1,0 +1,22 @@
+#admin {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+.admin-button  a{
+  text-decoration: none;
+  color: white;
+  /* background:linear-gradient(rgb(90, 90, 246),rgb(108, 108, 243)); */
+  border: 2px solid white;
+  border-radius: 18px;
+  padding: 8px 25px;
+  font-size: 1.2rem;
+  
+  /* font-weight: 600; */
+}
+#admin-container{
+    margin-top: -150px;
+}
+#admin-container p{
+    margin-bottom: 50px;
+}

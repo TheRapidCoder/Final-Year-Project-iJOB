@@ -1,0 +1,138 @@
+
+<% layout('layouts/extended') %>
+
+  <main>
+    
+      <section id="feature-jobs">
+        <div class="section-heading">
+          <h2>Featured Jobs</h2>
+          <p>Find Your Perfect Job Match</p>
+
+        </div>
+
+        <!-- featured job section -->
+
+        <div class="section-cotent">
+          <% jobs.map((job)=>{ %>
+
+
+          <div class="rows ">
+            <div class="column">
+              <h3>
+                <%= job.title %>
+              </h3>
+
+              <div class="job-location">
+                <i class="fa fa-building" aria-hidden="true"></i>
+                <p>
+                  <%= job.company %>
+                </p>
+                <!-- <i class="fa fa-suitcase" aria-hidden="true"></i>
+                <p>
+                  <%= job.experience %>
+                </p> -->
+                <i class="fa fa-money" aria-hidden="true"></i>
+                <p>
+                  <%= job.salary %>
+                </p>
+              </div>
+
+              <div class="job-location">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <p>
+                  <%= job.role %>
+                </p>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <p>
+                  <%= job.location %>
+                </p>
+              </div>
+              <button ><a href="/jobs/details/?id=<%= job._id %> " style="text-decoration: none;" class="white">View
+                  Details</a></button>
+            </div>
+
+
+
+          </div>
+
+
+          <% }) %>
+        </div>
+        <!-- <div class="btn">
+            <button class="button" type="submit">View More...</button>
+        </div> -->
+
+      </section>
+
+      <!-- Latest Jobs Sections -->
+
+      <!-- <section id="feature-jobs">
+        <div class="section-heading" style="margin-top: -30px;">
+            <h2>Latest Jobs</h2>
+            <p>Recently Posted Jobs</p>
+
+        </div>
+
+        <div class="section-cotent">
+
+            <% for(i=0; i<Math.ceil(jobs.length/2); i++){ %>
+
+            <div class="rows ">
+
+                <% if(i*2 < jobs.length) { %>
+                <% var job = jobs[i*2] %>
+
+                <div class="column">
+                    <h3><%= job.role %></h3>
+
+                    <div class="job-location">
+                        <i class="fa fa-amazon" aria-hidden="true"></i>
+                        <p><%= job.company %></p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <p><%= job.rating %> | 15.5K+ Reviews</p>
+                    </div>
+                  
+                    <div class="job-location">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <p><%= job.type %></p>
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <p><%= job.location %></p>
+                    </div>
+                    <button type="submit"><a href="/job/<%= job._id %>" style="text-decoration: none;">View Details</a></button>
+                </div>
+                <% } %>
+
+                <% if(i*2 + 1 < jobs.length) { %>
+                <% var job = jobs[i*2+1] %>
+
+                <div class="column">
+                    <h3><%= job.role %></h3>
+
+                    <div class="job-location">
+                        <i class="fa fa-amazon" aria-hidden="true"></i>
+                        <p><%= job.company %></p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <p><%= job.rating %> | 15.5K+ Reviews</p>
+                    </div>
+                  
+                    <div class="job-location">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <p><%= job.type %></p>
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <p><%= job.location %></p>
+                    </div>
+                    <button type="submit"><a href="/job/<%= job._id %>" style="text-decoration: none;">View Details</a></button>
+                </div>
+                <% } %>
+
+            </div>
+
+            <% } %>
+
+        </div>
+        <div class="btn">
+            <button class="button" type="submit">View More...</button>
+        </div>
+    </section>  -->
+     
+  </main>

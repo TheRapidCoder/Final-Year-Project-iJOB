@@ -1,0 +1,55 @@
+
+<!-- login and register form  -->
+
+<% layout('layouts/basic') %>
+
+  <div class="wrapper">
+    <div class="title-text">
+      <div class="title login">Login Form</div>
+      <div class="title signup">Signup Form</div>
+    </div>
+    <div class="form-container">
+      <div class="slide-controls">
+        <input type="radio" name="slide" id="login" checked>
+        <input type="radio" name="slide" id="signup">
+        <label for="login" class="slide login">Login</label>
+        <label for="signup" class="slide signup">Signup</label>
+        <div class="slider-tab"></div>
+      </div>
+      <div class="form-inner">
+        <form action="/login" method="POST" class="login">
+          <div class="field">
+            <input type="text" placeholder="Email Address" name="email" required>
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Password" name="password" required>
+          </div>
+          <!-- <div class="field">
+            <input type="checkbox" name="isAlumni">
+          </div> -->
+          <div class="pass-link"><a href="#">Forgot password?</a></div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Login">
+          </div>
+          <div class="signup-link">Don't have an account ? <a href="">Signup now</a></div>
+        </form>
+        <!--SignUp Form -->
+        <form action="/register" method="POST" class="login">
+          <div class="field">
+            <input type="text" name="rollNo" placeholder="Enter your enrollment number.." required>
+          </div>
+          <!-- <div class="field">
+            <input type="checkbox" name="isAlumni">
+          </div> -->
+          <div class="pass-link"><p style="text-align:center; color: #333; font-size: small;">** A confirmation email will be sent to your registered email address **</p></div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Get verification link">
+          </div>
+          <div class="signup-link" style="color: red;">In case of any error contact the institute.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+

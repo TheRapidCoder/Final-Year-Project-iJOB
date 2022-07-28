@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/job_details.css">
+    <div class="container">
+        <% jobs.map((job)=>{ %>
+        <div class="banner"></div>
+
+        <div class="main">
+
+            <div class="column">
+                <div class="job-des-container">
+                    <h2>
+                        <%= job.title %>
+                    </h2>
+
+                    <div class="job-location">
+                        <i class="fa fa-building" aria-hidden="true"></i>
+                        <p>
+                            <%= job.company %>
+                        </p>
+                        <i class="fa fa-suitcase" aria-hidden="true"></i>
+                        <p>
+                            <%= job.experience %>
+                        </p>
+                    </div>
+                    <div class="job-location">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                        <p>
+                            <%= job.salary %>
+                        </p>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <p>
+                            <%= job.role %>
+                        </p>
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <p>
+                            <%= job.location %>
+                        </p>
+                    </div>
+                    <button type="submit"><a class="white" href="<%= job.applylink %>">Apply Now</a></button>
+                </div>
+
+                <div class="job-des-main">
+                    <div class="job-des">
+                        <h3>Job Description</h3>
+                        <p>
+                            <%= job.description %>
+                        </p>
+                        <!-- <h4>Role</h4>
+                        <p>Software development</p> -->
+
+                        <h4>Employment Type</h4>
+                        <p><%= job.role %></p>
+                        <h4>Education</h4>
+                        <p><%= job.education %> </p>
+
+                        <h4>Key Skills</h4>
+                       <p> <%= job.skills %>
+                        
+                    </p>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+        <% }) %>
+    </div>

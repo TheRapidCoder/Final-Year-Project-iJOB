@@ -1,0 +1,104 @@
+<header>
+    <nav>
+        <div id="logo">
+            <span>
+                <i class="fa fa-info" aria-hidden="true"></i>
+                JOB
+            </span>
+        </div>
+        <div>
+            <ul id="navbar">
+                <li><a href="#">Home</a></li>
+                <!-- <li><a href="./other-pages/find_jobs.html">Find Jobs</a></li> -->
+                <!-- <li><a href="#">Companies</a></li> -->
+                <li><a href="#">Blog</a></li>
+                <!-- <li><a href="#">Pages</a></li> -->
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <div id="login-btn">
+            <span><i class="fa fa-user-circle" style="font-size:24px"></i></span>
+            <span><%= userName %></span><br>
+            <!-- <h6><%= userBranch %>-<span><%= userRoll %></span></h6> -->
+            <button ><a href="/signout" class="white">SignOut</a></button>
+        </div>
+    </nav>
+
+    <!-- ------Header Content------ -->
+    <div id="header-content">
+        <div class="content">
+            <h2 class="">The Easiest Way to Get Your New Job</h2>
+            <p>Find Jobs, Employment & Career Oppurtunities</p>
+
+
+
+            <form action="/filter" method="post">
+
+
+                <div id="job-search">
+               
+                    <div class="input-box">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <input type="text" name="title" placeholder="Job title, keywords...">
+                    </div>
+
+                    <!-- Filter for job locations -->
+
+                    <div class="input-box">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <select name="location" id="">
+                            <option disabled selected hidden>Job location</option>
+                            <option value="PAN India">PAN India</option>
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Delhi">Delhi</option>
+
+                        </select>
+                    </div>
+
+                    <!-- Filter for experience -->
+
+                    <div class="input-box">
+                        <i class="fa fa-suitcase" aria-hidden="true"></i>
+                        <select name="experience" id="">
+                            <option value="" disabled selected hidden>Select Experience</option>
+                            <option value="Fresher">Fresher</option>
+                            <option value="1 year">1 Year</option>
+                            <option value="2 years">2 Years</option>
+                            <option value="3 years">3 Years</option>
+                            <option value="4 years">4 Years</option>
+                            <option value="5 years">5 Years</option>
+                            <option value="6 years">6 Years</option>
+                            <option value="7 years">7 Years +</option>
+                        </select>
+                    </div>
+
+                    <!-- Filter for Salary -->
+
+                    <div class="input-box">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                        <select name="salary" id="">
+                            <option disabled selected hidden>CTC</option>
+                            <option value="0-3 LPA">0-3 LPA</option>
+                            <option value="3-6 LPA">3-6 LPA</option>
+                            <option value="6-10 LPA">6-10 LPA</option>
+                            <option value="10-15 LPA">10-15 LPA</option>
+                            <option value="15 LPA +">15 LPA +</option>
+                        </select>
+                    </div>
+
+                    <button type="submit">Find Jobs</button>
+                    
+                </div>
+            </form>
+
+            <p id="pop-search">Popular Searches: Designer, Developer, Web, IOS, PHP, Engineer</p>
+
+        </div>
+
+    </div>
+</header>

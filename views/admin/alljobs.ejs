@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/job_details.css">
+
+
+
+<div class="container">
+    <div class="banner"></div>
+    <h1 style="text-align: center;">Posted Jobs</h1>
+    <div class="main">
+        <% jobs.map((job)=>{ %>
+        <div class="column">
+            <div class="job-des-container">
+                <h2><%= job.title %></h2>
+
+                <div class="job-location">
+                    <i class="fa fa-building" aria-hidden="true"></i>
+                    <p><%= job.company %></p>
+
+                    <i class="fa fa-suitcase" aria-hidden="true"></i>
+                    <p><%= job.experience %></p>
+                </div>
+                <div class="job-location">
+                    <i class="fa fa-money" aria-hidden="true"></i>
+                    <p><%= job.salary %></p>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <p><%= job.role %></p>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <p><%= job.location %></p>   
+                </div>
+                <button><a href="/admin/deletejob/?id=<%= job._id %>" class="white">Delete</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+<% }) %>
